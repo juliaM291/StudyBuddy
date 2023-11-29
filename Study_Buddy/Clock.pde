@@ -27,6 +27,7 @@ class ClockDisplay extends Clock {
   void display() {
     textSize(fontSize);
     textAlign(CENTER);
+    fill(0);
     text(h + ":" + nf(m,2) + ":" + nf(s,2), x, y);
   }
 }
