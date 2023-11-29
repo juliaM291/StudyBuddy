@@ -6,7 +6,7 @@ Timer t;
 
 void setup() {
   size(600, 1000);
-  createGUI();
+  //createGUI();
   //For clock display
   clockDisplay = new ClockDisplay(25, 500, 75);
   //
