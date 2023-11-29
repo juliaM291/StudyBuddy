@@ -15,7 +15,7 @@ class ClockDisplay extends Clock {
   float x, y;
   
   ClockDisplay( int fs, float x, float y) {
-    this.fontSize = fontSize;
+    this.fontSize = fs;
     this.x = x;
     this.y = y;
   }
@@ -25,7 +25,7 @@ class ClockDisplay extends Clock {
   }
   
   void display() {
-    textSize(100);
+    textSize(fontSize);
     textAlign(CENTER);
     text(h + ":" + nf(m,2) + ":" + nf(s,2), x, y);
   }
