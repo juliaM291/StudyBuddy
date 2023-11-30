@@ -3,6 +3,7 @@ String Option1 = "dog";
 String Option2 = "cat";
 String Option3 = "rabbit";
 bars bar = new bars();
+Notification notice = new Notification();
 ClockDisplay clockDisplay;
 Animal options = new Animal("Dog", "Cat", "Rabbit");
 Timer t;
@@ -15,7 +16,7 @@ void setup() {
   createGUI();
   
   //reports
-
+  notice.report();
   
   //For clock display
   clockDisplay = new ClockDisplay(25, 500, 75);
