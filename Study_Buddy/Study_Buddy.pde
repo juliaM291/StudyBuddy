@@ -3,6 +3,9 @@ import g4p_controls.*;
 ClockDisplay clockDisplay;
 Animal options = new Animal("Dog", "Cat", "Rabbit", "Bird");
 Timer t;
+hungerBar hunger = new hungerBar();
+moodBar mood = new moodBar();
+energyBar energy = new energyBar();
 
 void setup() {
   size(600, 1000);
@@ -101,7 +104,10 @@ void draw() {
   circle(300,200,5); 
  
 
-
+  //create bars
+  hunger.drawMe();
+  mood.drawMe();
+  energy.drawMe();
   
   //Call time funtion
   time();
