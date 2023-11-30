@@ -9,16 +9,20 @@ Timer t;
 hungerBar hunger = new hungerBar();
 moodBar mood = new moodBar();
 energyBar energy = new energyBar();
+boolean paused = true;
+boolean running = false;
 
 void setup() {
   size(600, 1000);
-  //createGUI();
+  createGUI();
   //For clock display
   clockDisplay = new ClockDisplay(25, 500, 75);
   //
   println (millis());
   t = new Timer();
-  t.start();
+  if ( !paused ) {
+    t.start();
+  }
 }
 
 void draw() {
@@ -74,9 +78,9 @@ void draw() {
   strokeWeight(6);
   line(315, 200, 315, 180);
   line(285, 200, 285, 180);
+ 
   
 
-  
   //bunny 
   fill(255,255,255);
   
@@ -112,15 +116,20 @@ void draw() {
   energy.drawMe();
   
   //Call time funtion
+  fill(0);
+  textSize(30);
+  textAlign(CENTER);
+  text("Study Timer: ", 150, 450); 
   time();
+  
 }
 
-//
+// Creating the timer
 void time() {
   fill(0);
-  textSize(40);
-  textAlign(CENTER);
-  text(nf(t.hour(), 2)+" : "+nf(t.minute(), 2)+" : "+nf(t.second(), 2), 300, 450);
+  textSize(30);
+  textAlign(RIGHT);
+  text(nf(t.hour(), 2)+" : "+nf(t.minute(), 2)+" : "+nf(t.second(), 2), 425, 450);
   
 }
   
