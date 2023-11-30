@@ -1,7 +1,7 @@
 import g4p_controls.*;
 
 ClockDisplay clockDisplay;
-Animal options = new Animal("Dog", "Cat", "Rabbit", "Hamster", "Snake", "Bird");
+Animal options = new Animal("Dog", "Cat", "Rabbit", "Bird");
 Timer t;
 
 void setup() {
@@ -30,7 +30,7 @@ void draw() {
   ellipse(350,200,30,90);
   rect(250, 295, 50,30);
   rect(300, 295, 50,30);
-  line(100, 100,30,200);
+
   line(300, 220,300,200);
   
   fill(0);
