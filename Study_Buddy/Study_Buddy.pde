@@ -2,19 +2,21 @@ import g4p_controls.*;
 String Option1 = "dog";
 String Option2 = "cat";
 String Option3 = "rabbit";
-
+bars bar = new bars();
 ClockDisplay clockDisplay;
 Animal options = new Animal("Dog", "Cat", "Rabbit");
 Timer t;
-hungerBar hunger = new hungerBar();
-moodBar mood = new moodBar();
-energyBar energy = new energyBar();
+
 boolean paused = true;
 boolean running = false;
 
 void setup() {
   size(600, 1000);
   createGUI();
+  
+  //reports
+
+  
   //For clock display
   clockDisplay = new ClockDisplay(25, 500, 75);
   //
@@ -111,9 +113,7 @@ void draw() {
  
 
   //create bars
-  hunger.drawMe();
-  mood.drawMe();
-  energy.drawMe();
+  bar.drawUs();
   
   //Call time funtion
   fill(0);
