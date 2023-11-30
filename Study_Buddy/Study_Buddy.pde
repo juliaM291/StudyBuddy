@@ -1,7 +1,10 @@
 import g4p_controls.*;
+String Option1 = "dog";
+String Option2 = "cat";
+String Option3 = "rabbit";
 
 ClockDisplay clockDisplay;
-Animal options = new Animal("Dog", "Cat", "Rabbit", "Bird");
+Animal options = new Animal("Dog", "Cat", "Rabbit");
 Timer t;
 hungerBar hunger = new hungerBar();
 moodBar mood = new moodBar();
@@ -72,8 +75,7 @@ void draw() {
   line(315, 200, 315, 180);
   line(285, 200, 285, 180);
   
-  
-  
+
   
   //bunny 
   fill(255,255,255);
