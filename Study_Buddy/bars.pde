@@ -1,12 +1,21 @@
 class bars {
   float energy, hunger, mood;
   String feeling;
+  int startingMinute;
   
   bars() {
-    this.hunger = 10;
+    this.hunger = 30;
+    this.energy = 90;
     this.CalculateEnergy();
     this.CalculateMood();
-    
+    this.startingMinute = minute();
+  }
+  
+  void CalculateEnergy() {
+    if (minute() > this.startingMinute) {
+      this.energy -= 5;
+      bar.startingMinute = minute();
+    }
   }
   
   void drawUs() {
@@ -32,13 +41,10 @@ class bars {
     
   }
   
-  void CalculateEnergy() {
-    this.energy = 90;
-  }
   
   void CalculateMood() {
-    //this.mood = sqrt(sq(this.energy) + sq(this.hunger));
-    this.mood = 99;
+    this.mood = sqrt(sq(this.energy) + sq(this.hunger));
+    print(this.mood);
     
   }
   
