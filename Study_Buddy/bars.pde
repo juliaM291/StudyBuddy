@@ -3,7 +3,7 @@ class bars {
   String feeling;
   
   bars() {
-    this.hunger = 90;
+    this.hunger = 10;
     this.CalculateEnergy();
     this.CalculateMood();
     
@@ -37,71 +37,71 @@ class bars {
   }
   
   void CalculateMood() {
-    this.mood = sqrt(sq(this.energy) + sq(this.hunger));
+    //this.mood = sqrt(sq(this.energy) + sq(this.hunger));
+    this.mood = 99;
     
   }
   
   void emotions() {
-    if (this.mood == 60) {
-      this.feeling = "happy";
+    if (this.mood >= 90) {
+      this.feeling = "fantastic";
     }
     
-    if (this.mood < 10) {
-      this.feeling = "depressed";
+    if (this.mood < 90) {
+      this.feeling = "wonderful";
     }
     
-    if (this.mood < 20) {
-      this.feeling = "lonely";
+    if (this.mood < 80) {
+      this.feeling = "awesome";  
     }
     
-    if (this.mood < 30) {
-      this.feeling = "sad";  
+    if (this.mood < 70) {
+      this.feeling = "excited";
     }
     
-    if (this.mood < 40) {
-      this.feeling = "down"; 
-    }
+    if (this.mood < 65) {
+      this.feeling = "nice";
+    } 
     
-    if (this.mood < 45) {
-      this.feeling = "a little bit down";
-    }
-    
-    if (this.mood < 50) {
-      this.feeling = "bored"; 
+    if (this.mood < 60) {
+      this.feeling = "good";
     }
     
     if (this.mood < 55) {
       this.feeling = "fine";
     }
     
-    if (this.mood < 60) {
-      this.feeling = "good";
+    if (this.mood < 50) {
+      this.feeling = "bored"; 
     }
     
-    if (this.mood > 100) {
+    if (this.mood < 45) {
+      this.feeling = "a little bit down";
+    }
+    
+    if (this.mood < 40) {
+      this.feeling = "down"; 
+    }
+    
+    if (this.mood < 30) {
+      this.feeling = "sad";  
+    }
+    
+    if (this.mood < 20) {
+      this.feeling = "lonely";
+    }
+    
+    if (this.mood < 10) {
+      this.feeling = "depressed";
+    }
+    
+    if (this.mood == 60) {
+      this.feeling = "happy";
+    }
+    
+    if (this.mood >= 100) {
       this.feeling = "perfect";
     }
-    
-    if (this.mood > 95) {
-      this.feeling = "fantastic";
-    }
-    
-    if (this.mood > 90) {
-      this.feeling = "wonderful";
-    }
-    
-    if (this.mood > 80) {
-      this.feeling = "awesome";  
-    }
-    
-    if (this.mood > 70) {
-      this.feeling = "excited";
-    }
-    
-    if (this.mood > 65) {
-      this.feeling = "nice";
-    }
-    
   }
   
   
