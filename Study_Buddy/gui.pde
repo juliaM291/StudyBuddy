@@ -15,11 +15,36 @@
  */
 
 public void animalOption(GDropList source, GEvent event) { //_CODE_:AnimalOptions:640874:
-  println("dropList1 - GDropList >> GEvent." + event + " @ " + millis());
-} //_CODE_:AnimalOptions:640874:
+  clicked = true;
+ 
+ 
+  String option = AnimalOptions.getSelectedText();
+  println("You just chose", option);
+  
+  if( option.equals( "Option1")) {
+    Option1D = true;
+    
+  }
+
+  else if( option.equals("Option2")){
+    Option2C = true;
+    
+  }
+  
+  else if(option.equals("Option3")){
+    Option3B = true;
+    
+  }
+  
+    
+     
+  }
+
+    
+
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:timerStartStop:647111:
-  paused = false;
+  println("timerStartStop - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:timerStartStop:647111:
 
 
