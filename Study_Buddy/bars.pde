@@ -8,11 +8,11 @@ class bars {
     this.energy = 90;
     this.CalculateEnergyAndHunger();
     this.CalculateMood();
-    this.startingMinute = second();
+    this.startingMinute = minute();
   }
   
   void CalculateEnergyAndHunger() {
-    if (second() > this.startingMinute) {
+    if (minute() > this.startingMinute) {
       if (this.energy > 0) {
         this.energy -= 2;
       }
@@ -20,7 +20,7 @@ class bars {
         this.hunger -= random(3.75, 4);
       }
       
-      this.startingMinute = second();
+      this.startingMinute = minute();
     }
     
   }
