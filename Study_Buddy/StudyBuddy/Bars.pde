@@ -1,26 +1,46 @@
-class moodBar {
-  float mood;
+class bars {
+  float energy, hunger, mood;
   String feeling;
   
-  moodBar() {
-    this.mood = 80;
+  bars() {
+    this.hunger = 20;
+    this.CalculateEnergy();
+    this.CalculateMood();
+    
   }
   
-  void drawMe() {
+    void drawUs() {
     fill(0);
-    rect(400, 350, 200, 25);
+    rect(0, 350, 600, 25);
+    
+    
+    fill(255, 0, 0);
+    rect(200, 350, this.hunger*2, 25);
+    
+    fill(0, 255, 0);
+    rect(0, 350, this.energy*2, 25);
+    
     fill(0, 0, 255);
     rect(400, 350, this.mood*2, 25);
+    
     fill(255);
     textSize(18);
+    text("Energy", 75, 370);
+    text("Hunger", 275, 370);
     text("Mood", 475, 370);
-    
     
   }
   
-  String emotion() {
-    //calculateMood();
+  void CalculateEnergy() {
+    this.energy = 90;
+  }
+  
+  void CalculateMood() {
+    this.mood = sqrt(sq(this.energy) + sq(this.hunger));
     
+  }
+  
+  void emotions() {
     if (this.mood == 60) {
       this.feeling = "happy";
     }
@@ -81,11 +101,8 @@ class moodBar {
       this.feeling = "nice";
     }
     
-    return feeling;
   }
   
-  //void calculateMood(energyBar e, hungerBar h) {
-  //  this.mood = sqrt(sq(e.energy) + sq(h.hunger));
-  //}
+  
   
 }
