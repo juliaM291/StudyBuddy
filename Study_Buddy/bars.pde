@@ -4,18 +4,25 @@ class bars {
   int startingMinute;
   
   bars() {
-    this.hunger = 30;
+    this.hunger = 90;
     this.energy = 90;
-    this.CalculateEnergy();
+    this.CalculateEnergyAndHunger();
     this.CalculateMood();
-    this.startingMinute = minute();
+    this.startingMinute = second();
   }
   
-  void CalculateEnergy() {
-    if (minute() > this.startingMinute) {
-      this.energy -= 5;
-      bar.startingMinute = minute();
+  void CalculateEnergyAndHunger() {
+    if (second() > this.startingMinute) {
+      if (this.energy > 0) {
+        this.energy -= 2;
+      }
+      if (this.hunger > 0) {
+        this.hunger -= random(3.75, 4);
+      }
+      
+      this.startingMinute = second();
     }
+    
   }
   
   void drawUs() {
@@ -44,7 +51,6 @@ class bars {
   
   void CalculateMood() {
     this.mood = sqrt(sq(this.energy) + sq(this.hunger));
-    print(this.mood);
     
   }
   

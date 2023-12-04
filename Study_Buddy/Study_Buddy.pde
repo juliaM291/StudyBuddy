@@ -2,10 +2,10 @@ import g4p_controls.*;
 String Option1 = "dog";
 String Option2 = "cat";
 String Option3 = "rabbit";
-bars bar = new bars();
-Notification notice = new Notification();
+bars bar;
+Notification notice;
 ClockDisplay clockDisplay;
-Animal options = new Animal("Dog", "Cat", "Rabbit");
+Animal options;
 Timer t;
 
 boolean paused = true;
@@ -15,7 +15,13 @@ void setup() {
   size(600, 1000);
   createGUI();
   
+  bar = new bars();
+  notice = new Notification();
+  options = new Animal("Dog", "Cat", "Rabbit");
+  
+  
   //reports
+  
   notice.report();
   
   //For clock display
@@ -114,6 +120,8 @@ void draw() {
  
 
   //create bars
+  bar.CalculateEnergyAndHunger();
+  bar.CalculateMood();
   bar.drawUs();
   
   //Call time funtion
