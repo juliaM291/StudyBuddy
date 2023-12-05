@@ -8,6 +8,7 @@ boolean clicked = false;
 String Option1 = "dog";
 String Option2 = "cat";
 String Option3 = "rabbit";
+String option = "dog";
 bars bar;
 Notification notice;
 ClockDisplay clockDisplay;
@@ -52,12 +53,12 @@ void draw() {
   bar.CalculateMood();
   bar.drawUs();
   
+  println("We're about to draw the animal for", option);
+  animalWA.drawAnimal();
   
-  animalWA.drawDog();
+  //animalWA.drawCat();
   
-  animalWA.drawCat();
-  
-  animalWA.drawBunny();
+  //animalWA.drawBunny();
   
   //Call time funtion
   fill(0);

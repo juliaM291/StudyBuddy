@@ -18,23 +18,23 @@ public void animalOption(GDropList source, GEvent event) { //_CODE_:AnimalOption
   clicked = true;
  
  
-  String option = AnimalOptions.getSelectedText();
+  option = AnimalOptions.getSelectedText();
   println("You just chose", option);
   
-  if( option.equals( "Option1")) {
-    Option1D = true;
+  //if( option.equals( "Option1")) {
+  //  Option1D = true;
     
-  }
+  //}
 
-  else if( option.equals("Option2")){
-    Option2C = true;
+  //else if( option.equals("Option2")){
+  //  Option2C = true;
     
-  }
+  //}
   
-  else if(option.equals("Option3")){
-    Option3B = true;
+  //else if(option.equals("Option3")){
+  //  Option3B = true;
     
-  }
+  //}
   
     
      
@@ -42,6 +42,8 @@ public void animalOption(GDropList source, GEvent event) { //_CODE_:AnimalOption
 
     
 
+
+//public void button1_click1(GButton source, GEvent event) } //_CODE_:AnimalOptions:640874:
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:timerStartStop:647111:
   println("timerStartStop - GButton >> GEvent." + event + " @ " + millis());
@@ -57,7 +59,7 @@ public void createGUI(){
   G4P.setMouseOverEnabled(false);
   surface.setTitle("Sketch Window");
   AnimalOptions = new GDropList(this, 28, 90, 108, 80, 3, 20);
-  AnimalOptions.setItems(loadStrings("list_640874"), 1);
+  AnimalOptions.setItems(loadStrings("list_640874"), 0);
   AnimalOptions.addEventHandler(this, "animalOption");
   timerStartStop = new GButton(this, 457, 422, 80, 30);
   timerStartStop.setText("START");

@@ -14,8 +14,7 @@ class Animal {
     }
     
    void drawDog(){
-      if(Option1D == true){
- 
+           
           //dog body
           fill(196, 164, 132);
           strokeWeight(4);
@@ -40,13 +39,13 @@ class Animal {
           line(315, 200, 315, 180);
           line(285, 200, 285, 180);
           
-      }
+          
+      
           
     }
     
    void drawCat(){
-     
-     if(Option2C == true){
+         
       //cat 
       fill(255,146,72);
       triangle(300,160,230,150,255,200);
@@ -71,14 +70,13 @@ class Animal {
       line(315, 200, 315, 180);
       line(285, 200, 285, 180);
       
-     }
+      
+     
  
     }
     
    void drawBunny(){
-     
-     if(Option3B == true){
-      //bunny 
+     //bunny 
       fill(255,255,255);
       
       //ears 
@@ -105,6 +103,7 @@ class Animal {
       
       fill(255,182,193);
       circle(300,200,5); 
+      
      
     
      }
@@ -113,5 +112,34 @@ class Animal {
       
       
       
+    
+    
+    void drawAnimal(){
+      if(option.equals("dog")){
+        animalWA.drawDog();
+      }
+      else if(option.equals("cat")){
+        animalWA.drawCat();
+        
+      }
+      else if(option.equals("bunny")){
+        animalWA.drawBunny();
+        
+        
+      }
+      
+      
+      
     }
-} 
+    
+    
+      
+      
+      
+      
+    
+    
+    
+    
+  
+}
