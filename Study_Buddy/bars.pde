@@ -12,15 +12,22 @@ class bars {
   }
   
   void CalculateEnergyAndHunger() {
-    if (minute() > this.startingMinute) {
-      if (this.energy > 0) {
-        this.energy -= 2;
+    if (minute() == 0) {
+        this.startingMinute = minute();
       }
-      if (this.hunger > 0) {
+    if (second() > this.startingMinute) {
+      if (this.hunger <= 0) {
+        this.hunger = 0;
+        this.energy -= 2;
+        if (this.energy <= 0) {
+          this.energy = 0;
+        }
+      }
+      else {
+        this.energy -= 2;
         this.hunger -= random(3.75, 4);
       }
-      
-      this.startingMinute = minute();
+      this.startingMinute = second();
     }
     
   }
