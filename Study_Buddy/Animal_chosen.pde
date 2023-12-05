@@ -107,12 +107,6 @@ class Animal {
      
     
      }
-      
-      
-      
-      
-      
-    
     
     void drawAnimal(){
       if(option.equals("dog")){
