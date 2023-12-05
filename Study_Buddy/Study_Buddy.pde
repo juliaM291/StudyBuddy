@@ -25,10 +25,8 @@ void setup() {
   notice = new Notification();
   animalWA = new Animal("Dog", "Cat", "Rabbit");
   
-  
   //reports
-  
-  notice.report();
+  notice.headingReport();
   
   //For clock display
   clockDisplay = new ClockDisplay(25, 500, 75);
@@ -52,6 +50,8 @@ void draw() {
   bar.CalculateMood();
   bar.drawUs();
   
+  //Reports
+  notice.moodReport();
   
   animalWA.drawDog();
   
