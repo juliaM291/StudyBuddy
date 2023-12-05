@@ -38,7 +38,9 @@ public void animalOption(GDropList source, GEvent event) { //_CODE_:AnimalOption
 }
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:timerStartStop:647111:
-  println("timerStartStop - GButton >> GEvent." + event + " @ " + millis());
+  paused = !paused;
+  if( !paused)
+    t.start();
 } //_CODE_:timerStartStop:647111:
 
 public void textarea1_change1(GTextArea source, GEvent event) { //_CODE_:textarea1:806052:

@@ -32,9 +32,9 @@ void setup() {
   //
   println (millis());
   t = new Timer();
-  if ( !paused ) {
-    t.start();
-  }
+  //if ( !paused ) {
+    //t.start();
+  //}
 }
 
 void draw() {

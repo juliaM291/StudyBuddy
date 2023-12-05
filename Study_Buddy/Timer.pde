@@ -1,6 +1,7 @@
 class Timer {
   int startTime = 0, stopTime = 0;
   boolean running = false; 
+  
   void start() {
     startTime = millis();
     running = true;
