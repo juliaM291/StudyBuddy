@@ -5,10 +5,7 @@ class Timer {
     startTime = millis();
     running = true;
   }
-  //void stop() {
-  //  stopTime = millis();
-  //  running = false;
-  //}
+
   int getElapsedTime() {
     int elapsed;
     if (running) {
