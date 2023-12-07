@@ -42,8 +42,10 @@ public void animalOption(GDropList source, GEvent event) { //_CODE_:AnimalOption
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:timerStartStop:647111:
   paused = !paused;
-  if( !paused)
+  if( !paused) {
     t.start();
+    bar.running = true;
+  }
 } //_CODE_:timerStartStop:647111:
 
 

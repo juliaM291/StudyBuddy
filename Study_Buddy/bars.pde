@@ -2,32 +2,36 @@ class bars {
   float energy, hunger, mood;
   String feeling;
   int startingMinute;
+  boolean running;
   
   bars() {
     this.hunger = 90;
     this.energy = 90;
+    this.running = false;
     this.CalculateEnergyAndHunger();
     this.CalculateMood();
     this.startingMinute = minute();
   }
   
   void CalculateEnergyAndHunger() {
-    if (minute() == 0) {
+    if (running) {
+      if (minute() == 0) {
+          this.startingMinute = minute();
+        }
+      if (minute() > this.startingMinute) {
+        if (this.hunger <= 0) {
+          this.hunger = 0;
+          this.energy -= 2;
+          if (this.energy <= 0) {
+            this.energy = 0;
+          }
+        }
+        else {
+          this.energy -= 2;
+          this.hunger -= random(3.75, 4);
+        }
         this.startingMinute = minute();
       }
-    if (second() > this.startingMinute) {
-      if (this.hunger <= 0) {
-        this.hunger = 0;
-        this.energy -= 2;
-        if (this.energy <= 0) {
-          this.energy = 0;
-        }
-      }
-      else {
-        this.energy -= 2;
-        this.hunger -= random(3.75, 4);
-      }
-      this.startingMinute = second();
     }
     
   }

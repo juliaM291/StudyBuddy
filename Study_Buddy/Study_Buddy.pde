@@ -4,6 +4,7 @@ boolean Option2C = false;
 boolean Option3B = false;
 boolean clicked = false;
 
+
 String Option1 = "dog";
 String Option2 = "cat";
 String Option3 = "rabbit";
@@ -27,15 +28,16 @@ void setup() {
   
   //reports
   notice.headingReport();
+  notice.choosePetReport();
   
   //For clock display
   clockDisplay = new ClockDisplay(25, 500, 75);
   //
   println (millis());
   t = new Timer();
-  //if ( !paused ) {
-    //t.start();
-  //}
+  if ( !paused ) {
+    t.start();
+  }
 }
 
 void draw() {
