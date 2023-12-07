@@ -13,19 +13,27 @@ class Notification {
   }
   
   void choosePetReport() {
-    if (clicked == true) {
-      if (Option1D == true) {
-        println("You have choosen dog as your pet");
+      if (option.equals("dog")) {
+        println("You have choosen", Option1, "as your pet");
       }
-      if (Option2C == true) {
-        println("You have choosen cat as your pet");
+      if (option.equals("cat")) {
+        println("You have choosen", Option2, "as your pet");
       }
-      if (Option3B == true) {
-        println("You have choosen bunny as your pet");
+      if (option.equals("bunny")) {
+        println("You have choosen", Option3, "as your pet");
       }
       
-    }
+  }
+  
+  void introduction() {
+    println("your pet is now called");
     
+  }
+  
+  void timeReport() {
+    if ((t.getElapsedTime() / (1000*60)) % 60 == 60) {
+      println("You have already used Study Buddy for an hour. You should take a break.");
+    }
   }
   
   void moodReport() {

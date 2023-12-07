@@ -28,7 +28,6 @@ void setup() {
   
   //reports
   notice.headingReport();
-  notice.choosePetReport();
   
   //For clock display
   clockDisplay = new ClockDisplay(25, 500, 75);
@@ -56,6 +55,8 @@ void draw() {
 
   //Reports
   notice.moodReport();
+  notice.choosePetReport();
+  notice.timeReport();
   
   //animalWA.drawCat();
   
