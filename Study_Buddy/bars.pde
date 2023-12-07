@@ -10,10 +10,10 @@ class bars {
     this.running = false;
     this.CalculateEnergyAndHunger();
     this.CalculateMood();
+    this.startingMinute = minute();
   }
   
   void CalculateEnergyAndHunger() {
-    this.startingMinute = minute();
     if (running) {
       if (minute() == 0) {
           this.startingMinute = minute();
