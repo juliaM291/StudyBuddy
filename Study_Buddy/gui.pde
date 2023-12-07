@@ -21,14 +21,29 @@ public void animalOption(GDropList source, GEvent event) { //_CODE_:AnimalOption
   
      
   }
-
+  
+  //if( option.equals( "Option1")) {
+  //  Option1D = true;
     
+  //}
+
+  //else if( option.equals("Option2")){
+  //  Option2C = true;
+    
+  //}
+  
+  //else if(option.equals("Option3")){
+  //  Option3B = true;
+    
+  //}
 
 
 //public void button1_click1(GButton source, GEvent event) } //_CODE_:AnimalOptions:640874:
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:timerStartStop:647111:
-  println("timerStartStop - GButton >> GEvent." + event + " @ " + millis());
+  paused = !paused;
+  if( !paused)
+    t.start();
 } //_CODE_:timerStartStop:647111:
 
 

@@ -4,7 +4,6 @@ boolean Option2C = false;
 boolean Option3B = false;
 boolean clicked = false;
 
-
 String Option1 = "dog";
 String Option2 = "cat";
 String Option3 = "rabbit";
@@ -34,9 +33,9 @@ void setup() {
   //
   println (millis());
   t = new Timer();
-  if ( !paused ) {
-    t.start();
-  }
+  //if ( !paused ) {
+    //t.start();
+  //}
 }
 
 void draw() {
