@@ -12,7 +12,7 @@ String option = "dog";
 bars bar;
 Notification notice;
 ClockDisplay clockDisplay;
-Animal animalWA = new Animal("Dog", "Cat", "Rabbit");
+Animal animalWA;
 Timer t;
 
 boolean paused = true;
