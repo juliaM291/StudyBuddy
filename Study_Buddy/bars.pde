@@ -1,7 +1,7 @@
 class bars {
   float energy, hunger, mood;
   String feeling;
-  int startingMinute;
+  int startingMinute, stoppedMinute;
   boolean running;
   
   bars() {
@@ -11,6 +11,7 @@ class bars {
     this.CalculateEnergyAndHunger();
     this.CalculateMood();
     this.startingMinute = minute();
+    this.stoppedMinute = minute();
   }
   
   void CalculateEnergyAndHunger() {
@@ -28,13 +29,15 @@ class bars {
         }
         else {
           this.energy -= 2;
-          this.hunger -= random(3.75, 4);
+          this.hunger -= random(2.75, 4);
         }
         this.startingMinute = minute();
       }
     }
     
   }
+  
+    
   
   void drawUs() {
     strokeWeight(2);
@@ -61,8 +64,16 @@ class bars {
   
   
   void CalculateMood() {
-    this.mood = sqrt(sq(this.energy) + sq(this.hunger));
+    if (running) {
+      this.mood = sqrt(sq(this.energy) + sq(this.hunger));
+    }
     
+    if (!running) {
+      this.mood = 30;
+      if (minute() > this.stoppedMinute) {
+        this.mood -= 1;
+      }
+    }
   }
   
   void emotions() {
